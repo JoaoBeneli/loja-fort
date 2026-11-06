@@ -1,0 +1,11 @@
+@import "tailwindcss";
+:root{color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at top,#1d2950 0%,#0b0e2a 35%,#050816 100%);color:#fff;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+#root{min-height:100vh}
+.title{font-weight:900;font-style:italic;letter-spacing:.08em;text-transform:uppercase}
+button,input,select{font:inherit}
+button{cursor:pointer}
+input::placeholder{color:#94a3b8}
+select option{background:#111827;color:#fff}
