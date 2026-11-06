@@ -36,7 +36,7 @@ export default function App(){
           {i.bundle&&<div>{i.bundle}</div>}
           {expandedId===i.id && i.isBundle && <div className="rounded-md border border-violet-400/50 bg-violet-500/10 px-2 py-1 text-[11px] text-violet-200">Preço do pacote aparece ao abrir o item.</div>}
           <div>Entrou: {brt(i.inDate)}</div><div>Sai: {brt(i.outDate)}</div></Card>}/></section>;
-      const visibleSection = (selectedSection && sectionGroups.find(([section]) => section === selectedSection)?.[1]) ?? [];
+      const visibleSection = sectionGroups.find(([section]) => section === selectedSection)?.[1] ?? [];
       return <div className="lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-5">
         <aside className="mb-5 lg:mb-0">
           <div className="lg:sticky lg:top-24 rounded-[26px] border border-[var(--line)] bg-[var(--surface-soft)] p-3 shadow-[var(--shadow)]">
