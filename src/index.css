@@ -1,11 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Orbitron:wght@500;600;700;800;900&display=swap');
 @import "tailwindcss";
-:root{color-scheme:dark}
+:root{
+  color-scheme: light;
+  --bg-1:#f4f6fb;
+  --bg-2:#edf3ff;
+  --bg-3:#e9eefb;
+  --header-bg:rgba(255,255,255,0.72);
+  --hero-bg:linear-gradient(135deg,rgba(255,255,255,0.96),rgba(236,242,255,0.9),rgba(228,233,255,0.88),rgba(240,244,255,0.82));
+  --line:rgba(148,163,184,0.22);
+  --tab-bg:rgba(255,255,255,0.72);
+  --tab-hover:rgba(226,232,240,0.82);
+  --pill-bg:rgba(255,255,255,0.78);
+  --cell-bg:rgba(255,255,255,0.7);
+  --cell-image-bg:#eef3ff;
+  --surface-soft:rgba(255,255,255,0.8);
+  --surface-strong:#f8fafc;
+  --card-bg:rgba(255,255,255,0.78);
+  --accent:#2563eb;
+  --text:#0f172a;
+  --muted:#52607a;
+  --shadow:0 24px 60px rgba(15,23,42,.08),0 0 0 1px rgba(148,163,184,.18),0 12px 30px rgba(37,99,235,.06),0 0 18px rgba(168,85,247,.05);
+}
+:root[data-theme='dark']{
+  color-scheme: dark;
+  --bg-1:#050b16;
+  --bg-2:#0c1527;
+  --bg-3:#111d32;
+  --header-bg:rgba(9,14,30,0.76);
+  --hero-bg:linear-gradient(135deg,rgba(15,23,42,0.96),rgba(17,24,39,0.9),rgba(49,46,129,0.8),rgba(15,23,42,0.96));
+  --line:rgba(148,163,184,0.18);
+  --tab-bg:rgba(15,23,42,0.52);
+  --tab-hover:rgba(30,41,59,0.9);
+  --pill-bg:rgba(15,23,42,0.54);
+  --cell-bg:rgba(15,23,42,0.56);
+  --cell-image-bg:#0f172a;
+  --surface-soft:rgba(15,23,42,0.7);
+  --surface-strong:#111827;
+  --card-bg:rgba(15,23,42,0.66);
+  --accent:#67e8f9;
+  --text:#e5edf8;
+  --muted:#c3cfdf;
+  --shadow:0 28px 80px rgba(2,6,23,.76),0 0 0 1px rgba(148,163,184,.12),0 14px 28px rgba(34,211,238,.08),0 0 18px rgba(168,85,247,.14);
+}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;min-height:100vh;background:radial-gradient(circle at top,#1d2950 0%,#0b0e2a 35%,#050816 100%);color:#fff;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at top,rgba(96,165,250,.14),transparent 16%),radial-gradient(circle at 80% 18%,rgba(192,132,252,.12),transparent 20%),radial-gradient(circle at bottom right,rgba(250,204,21,.08),transparent 18%),linear-gradient(180deg,var(--bg-1) 0%,var(--bg-2) 18%,var(--bg-3) 42%,var(--bg-1) 100%);color:var(--text);font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;letter-spacing:-0.02em}
 #root{min-height:100vh}
-.title{font-weight:900;font-style:italic;letter-spacing:.08em;text-transform:uppercase}
+.title{font-family:'Orbitron','Inter',sans-serif;font-weight:800;font-style:normal;letter-spacing:.14em;text-transform:uppercase;text-shadow:0 0 16px rgba(37,99,235,.1),0 0 18px rgba(168,85,247,.08)}
 button,input,select{font:inherit}
 button{cursor:pointer}
-input::placeholder{color:#94a3b8}
-select option{background:#111827;color:#fff}
+input::placeholder{color:#64748b}
+select option{background:#e5e7eb;color:#0f172a}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:rgba(148,163,184,.18)}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#8b5cf6,#22d3ee);border-radius:999px;border:2px solid rgba(148,163,184,.18)}
+.fortnite-panel{box-shadow:var(--shadow)}
+.fortnite-glow{text-shadow:0 0 12px rgba(37,99,235,.12),0 0 16px rgba(168,85,247,.08)}
+.fortnite-grid{background-image:linear-gradient(rgba(148,163,184,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(148,163,184,.045) 1px,transparent 1px);background-size:28px 28px}
+.fortnite-chip{box-shadow:inset 0 1px 0 rgba(255,255,255,.24),0 0 12px rgba(59,130,246,.05)}
